@@ -1,0 +1,3 @@
+split mini consoles into files
+make read/write functionality for database
+make tuples the first element of a list in database
