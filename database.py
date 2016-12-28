@@ -1,17 +1,19 @@
-import tup_maker
+"""
+Store and retrieve data in a file.
+"""
+import json
 
-holder = []
+overall = []
 
 def storage(tuplist, parts):
+    """Store weekday lists as nested lists."""
     newtry = [('week_of_' + parts[0][2:4] + parts[1] + parts[2]), tuplist]
-    try:
-        overall
-    except NameError:
-        overall = []
-    tup_maker.week_tuples(parts)
-    overall.extend(newtry)
-    holder.extend(overall)
-    return overall
+    holder = []
+    holder.extend(newtry)
+    overall.extend(holder)
+
+    return holder
 
 def check_storage():
-    return holder
+    """Return all stored data."""
+    return overall

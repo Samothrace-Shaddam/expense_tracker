@@ -1,15 +1,22 @@
-import new_mon
-import database
-import tup_maker
+"""
+Organize all modules and deal with user input.
+
+Function console() sends user to mini consoles for entering
+or viewing information.
+"""
+import interface_enter
+import interface_view
 
 
 def console():
+    """Send user to appropriate module based on input."""
+    print('Welcome to your week expenses calculator!')
     menu = '''
-Welcome to your week expenses calculator!
     Options (Enter the letter in parenthesis() to select):
-    -Enter expenses for a new week (E)
+    -Enter expenses (E)
     -View expenses for previous days or weeks (V)
     -Help (H)
+    -Quit (Q)
 
     '''
     console_esc = False
@@ -17,29 +24,18 @@ Welcome to your week expenses calculator!
         user_input = input(menu)
 
         if str.lower(user_input) == 'e':
-            parts = new_mon.date_input()
-            tuplist = tup_maker.week_tuples(parts)
-            overall = database.storage(tuplist, parts)
-            print('Week created:\n', overall)
-
+            interface_enter.enter_data()
             continue
 
         elif str.lower(user_input) == 'v':
-            if input('print all? y/n') == 'y':
-                print(database.check_storage())
+            interface_view.view_console()
 
-
-            # isearch = input('Search for a week or date here. (H) for '
-            #                 'input instructions.')
-            # if isearch in overall:
-            #     pass
-            #     # print( list which contains isearch, use a generator expres-
-            #     # sion)
         elif str.lower(user_input) == 'h':
             pass
             # write help statement
-        else:
-            pass
+        elif str.lower(user_input) == 'q':
+            print('Bye!')
+            console_esc = True
 
 
 
