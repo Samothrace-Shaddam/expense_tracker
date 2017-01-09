@@ -1,3 +1,7 @@
-split mini consoles into files
-make read/write functionality for database
-make tuples the first element of a list in database
+
+regex error catching for new_mon and search
+make db_search() a generator and class to be reused in interface_enter
+interface_enter.db_new() should check if expenditures exist and merge
+json doesnt preserve tuples...?
+newly added weeks should be sorted
+change database to nested dictionaries
