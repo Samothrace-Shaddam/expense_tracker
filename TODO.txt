@@ -1,0 +1,9 @@
+(A) Write help files
+(A) Update documentation
+(C) regex error catching for new_mon and search
+(B) revamp search into a single generator
+(B) change database to nested dictionary
+(B) interface_enter.db_new() should check if expenditures exist and merge
+(C) all database checks and searches load the whole database to temporary
+    lists, this could become time consuming with large databases,
+    switch to legitimate file searches
