@@ -1,11 +1,10 @@
 """
-Organize all modules and deal with user input.
+Organizes all modules and deals with user input.
 
 Function console() sends user to mini consoles for entering
 or viewing information.
 """
-import interface_enter
-import interface_view
+import interface_enter, interface_view, help_page
 
 
 def console():
@@ -24,18 +23,22 @@ def console():
         user_input = input(menu)
 
         if str.lower(user_input) == 'e':
-            interface_enter.enter_data()
+            interface_enter.enter_data_console()
             continue
 
         elif str.lower(user_input) == 'v':
             interface_view.view_console()
 
         elif str.lower(user_input) == 'h':
-            pass
+            help_page.main_help()
             # write help statement
         elif str.lower(user_input) == 'q':
             print('Bye!')
             console_esc = True
+
+        else:
+            print('Input incorrect.')
+            continue
 
 
 
