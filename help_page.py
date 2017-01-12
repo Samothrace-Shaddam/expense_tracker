@@ -21,7 +21,7 @@ From the enter console, you can add expenses to your database.
 In the current version, you must "initiate" a week before you can add
 information to a day in that week. After initiating, go to (D) to
 enter expenses. Data is saved after answering (N) no to the enter more
-expenses promot. If you have made a mistake, you can (C) cancel at this
+expenses prompt. If you have made a mistake, you can (C) cancel at this
 time.
 '''
     print(help_text)
